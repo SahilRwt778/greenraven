@@ -25,39 +25,50 @@ export default function ServicesFeatureSection() {
   ];
 
   return (
-    <section className="w-full bg-slate-50 py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            End-to-End Commercial Project Support
+    <section className="w-full bg-white py-24 px-6">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+
+        {/* LEFT CONTENT */}
+        <div>
+          <h2 className="text-4xl md:text-5xl font-light text-slate-900 leading-tight mb-6">
+            Why <span className="underline decoration-[#cc0033] decoration-2 underline-offset-6">
+              GreenRaven
+            </span>{" "}
+            Energy?
           </h2>
-          <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-            From equipment sourcing to installation and permitting, we provide
-            everything needed to execute commercial projects efficiently and at scale.
+
+          <p className="text-slate-600 text-lg mb-8 max-w-md">
+            We deliver a better experience every day for every customer.
           </p>
+
+          <button className="bg-[#cc0033] text-white px-8 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-[#a30028] transition">
+            About us
+          </button>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((item, idx) => (
-            <div
-              key={idx}
-              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
-            >
-              <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
-                <item.icon className="h-6 w-6" />
-              </div>
+        {/* RIGHT FEATURES */}
+        <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-14">
 
-              <h3 className="mt-5 text-lg font-semibold text-slate-900">
+          {features.map((item, idx) => (
+            <div key={idx} className="shadow-lg p-3">
+              {/* Icon */}
+              <item.icon className="h-8 w-8 text-[#cc0033] mb-4" />
+
+              {/* Title */}
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">
                 {item.title}
               </h3>
 
-              <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+              {/* Description */}
+              <p className="text-slate-600 leading-relaxed mb-4">
                 {item.desc}
               </p>
+
+              {/* Divider */}
+              <div className="h-[2px] w-16 bg-slate-200" />
             </div>
           ))}
+
         </div>
       </div>
     </section>

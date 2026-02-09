@@ -1,11 +1,16 @@
 import React from 'react';
-import ServicesFeatureSection from '../components/Cards/ServicesFeatureSection';
-import EcosystemHub from '../components/Cards/EcoSystemHub';
-import solarImage1 from '../assets/images/Solar1.jpg';
-import solarImage2 from '../assets/images/Solar2.jpg';
-import transformerImage from '../assets/images/transformer.jpg';
-import powerSupplyImg from '../assets/images/powerSupply.jpg';
+import ServicesFeatureSection from './ServicesFeatureSection';
+import EcosystemHub from './EcoSystemHub';
+import solarImage1 from '../../assets/images/Solar1.jpg';
+import solarImage2 from '../../assets/images/Solar2.jpg';
+import transformerImage from '../../assets/images/transformer.jpg';
+import powerSupplyImg from '../../assets/images/powerSupply.jpg';
+import ResidentialEnergySection from './ResidentialEnergySection';
+import GreenRavenBrowseSection from './GreenRavenBrowseSection';
 import { NavLink } from 'react-router-dom';
+import CommercialEnergySection from './CommercialEnergySection';
+import RealEnergyMakeover from './RealEnergyMakeover';
+
 
 const Home = () => {
     return (
@@ -19,13 +24,13 @@ const Home = () => {
                 <p className="text-gray-500 text-lg mb-8">Green Raven supports the energy production industry as a central hub—primarily in commercial solar, while also supporting geothermal, generators, and other power solutions. We help customers execute projects by providing.</p>
 
                 <div className="flex space-x-4 mb-20">
-                    <a target='_blank' href='https://calendar.app.google/9qsvNemHcAkYwesn9
+                    <NavLink target='_blank' to='https://calendar.app.google/9qsvNemHcAkYwesn9
 '><button className="bg-[#cc0033] text-white px-8 py-3 text-sm font-bold uppercase tracking-wide hover:bg-red-800 transition-colors cursor-pointer">
                         Contact Us
-                    </button></a>
-                    <button className="bg-[#5c6670] text-white px-8 py-3 text-sm font-bold uppercase tracking-wide hover:bg-gray-700 transition-colors">
+                    </button></NavLink>
+                    <NavLink to={"/product_and_services"}><button className="bg-[#5c6670] text-white px-8 py-3 text-sm font-bold uppercase tracking-wide hover:bg-gray-700 transition-colors cursor-pointer">
                         Products & Services
-                    </button>
+                    </button></NavLink>
                 </div>
 
                 {/* Image Grid */}
@@ -68,8 +73,15 @@ const Home = () => {
                 </div>
             </div>
 
+            <GreenRavenBrowseSection/>
+
             <ServicesFeatureSection/>
-            <EcosystemHub/>
+            
+            <ResidentialEnergySection/>
+
+            <RealEnergyMakeover/>
+
+            <CommercialEnergySection/>
 
             {/* Dark Section */}
                    </div>

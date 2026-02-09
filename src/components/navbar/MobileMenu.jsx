@@ -10,7 +10,14 @@ const MobileMenu = ({ onClose }) => {
       <NavLink to="/contact" onClick={onClose}>Contact Us</NavLink>
       <NavLink to="/product_and_services" onClick={onClose}>Products & Services</NavLink>
 
+      <style jsx>{`
+        .active {
+            color: #cc0033;
+
+        }`}
+      </style>
     </div>
+    
   );
 };
 
