@@ -1,4 +1,5 @@
 import { Truck, Users, CreditCard, FileCheck } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 export default function ServicesFeatureSection() {
   const features = [
@@ -41,9 +42,9 @@ export default function ServicesFeatureSection() {
             We deliver a better experience every day for every customer.
           </p>
 
-          <button className="bg-[#cc0033] text-white px-8 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-[#a30028] transition">
+          <NavLink to={'/about'}><button className="bg-[#cc0033] text-white px-8 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-[#a30028] transition cursor-pointer">
             About us
-          </button>
+          </button></NavLink>
         </div>
 
         {/* RIGHT FEATURES */}
